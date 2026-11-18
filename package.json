@@ -1,0 +1,14 @@
+{
+  "name": "xuhao-academic-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview:build": "node build.mjs --preview",
+    "check": "node check.mjs",
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist",
+    "pages:review": "node build.mjs --release-review && node check.mjs --release-review",
+    "pages:check-source": "node release-check.mjs --source",
+    "pages:stage": "node release-check.mjs --stage"
+  }
+}
